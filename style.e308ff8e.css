@@ -1,7 +1,8 @@
 body {
-  font-family: Poppins,sans-serif;
+  font-family: Poppins, sans-serif;
   color: #0f3c4b;
   background-color: #f8f8f8;
+  /* 80 20 */
 }
 
 strong {
@@ -9,7 +10,7 @@ strong {
 }
 
 [v-cloak] {
-  display: none!important;
+  display: none !important;
 }
 
 .container {
@@ -23,6 +24,7 @@ strong {
   width: 680px;
   text-align: center;
   font-size: 1.25rem;
+  /* 20 */
   position: relative;
   padding: 50px 20px;
 }
@@ -30,15 +32,17 @@ strong {
 .box.has-advanced-upload {
   outline: 2px dashed #686868;
   outline-offset: -10px;
-  -webkit-transition: outline-offset .15s ease-in-out,background-color .15s linear;
-  transition: outline-offset .15s ease-in-out,background-color .15s linear;
+
+  -webkit-transition: outline-offset .15s ease-in-out, background-color .15s linear;
+  transition: outline-offset .15s ease-in-out, background-color .15s linear;
 }
 
 .box.is-dragover {
   outline-offset: -20px;
 }
 
-.box__dragndrop,.box__icon {
+.box__dragndrop,
+.box__icon {
   display: none;
 }
 
@@ -55,32 +59,36 @@ strong {
 }
 
 @-webkit-keyframes appear-from-inside {
-  0% {
+  from {
     -webkit-transform: translateY(-50%) scale(0);
   }
+
   75% {
     -webkit-transform: translateY(-50%) scale(1.1);
   }
+
   to {
     -webkit-transform: translateY(-50%) scale(1);
   }
 }
 
 @keyframes appear-from-inside {
-  0% {
+  from {
     transform: translateY(-50%) scale(0);
   }
+
   75% {
     transform: translateY(-50%) scale(1.1);
   }
+
   to {
     transform: translateY(-50%) scale(1);
   }
 }
 
 .box__file {
-  width: .1px;
-  height: .1px;
+  width: 0.1px;
+  height: 0.1px;
   opacity: 0;
   overflow: hidden;
   position: absolute;
@@ -96,13 +104,16 @@ strong {
   overflow: hidden;
 }
 
-.box__file+label:hover strong,.box__file.has-focus+label strong,.box__file:focus+label strong {
+.box__file+label:hover strong,
+.box__file:focus+label strong,
+.box__file.has-focus+label strong {
   color: #3977d3;
 }
 
-.box__file.has-focus+label,.box__file:focus+label {
+.box__file:focus+label,
+.box__file.has-focus+label {
   outline: 1px dotted #000;
-  outline: 5px auto -webkit-focus-ring-color;
+  outline: -webkit-focus-ring-color auto 5px;
 }
 
 .file-list {
@@ -131,11 +142,14 @@ strong {
   margin-top: 40px;
 }
 
-.box__button:focus,.box__button:hover {
+.box__button:hover,
+.box__button:focus {
   background-color: #0045ab;
 }
 
-*,figure,h1 {
+*,
+h1,
+figure {
   font-size: 100%;
   font-family: inherit;
   font-weight: inherit;
@@ -144,77 +158,101 @@ strong {
   vertical-align: baseline;
   border: 0;
   padding: 0;
-  margin: 0;
+  margin: 0
 }
 
-*,:after,:before,input[type=search] {
+*,
+*::before,
+*::after,
+input[type=search] {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  box-sizing: border-box;
+  box-sizing: border-box
 }
 
-*,:after,:before {
+*,
+*::before,
+*::after {
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale
 }
 
 html {
-  -ms-overflow-style: -ms-autohiding-scrollbar;
+  -ms-overflow-style: -ms-autohiding-scrollbar
+}
+
+html {
   -ms-touch-action: manipulation;
-  touch-action: manipulation;
+  touch-action: manipulation
 }
 
 svg {
   fill: currentColor;
   vertical-align: middle;
-  pointer-events: none;
+  pointer-events: none
 }
 
-ol,ul {
-  list-style: none;
+ul,
+ol {
+  list-style: none
 }
 
 em {
-  font-style: italic;
+  font-style: italic
 }
 
 b {
-  font-weight: inherit;
+  font-weight: inherit
 }
 
 i {
-  font-style: inherit;
+  font-style: inherit
 }
 
 ins {
-  text-decoration: none;
+  text-decoration: none
 }
 
-input,select,textarea {
+input,
+textarea,
+select {
   border-radius: 0;
-  border: none;
+  border: none
 }
 
 select:-moz-focusring {
   text-shadow: 0 0 0 #000;
-  color: transparent;
+  color: transparent
 }
 
-input[type=email],input[type=number],input[type=search],input[type=tel],input[type=text],input[type=url],select,textarea {
+input[type=text],
+input[type=email],
+input[type=number],
+input[type=search],
+input[type=tel],
+input[type=url],
+textarea,
+select {
   -webkit-appearance: none;
-  -moz-appearance: textfield;
+  -moz-appearance: textfield
 }
 
-input::-webkit-inner-spin-button,input::-webkit-outer-spin-button {
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
   -webkit-appearance: none;
-  margin: 0;
+  margin: 0
 }
 
-input::-ms-clear,input::-ms-reveal {
-  display: none;
+input::-ms-reveal {
+  display: none
 }
 
-button,input[type=submit] {
+input::-ms-clear {
+  display: none
+}
+
+button,
+input[type=submit] {
   border: none;
-  background-color: transparent;
+  background-color: transparent
 }
