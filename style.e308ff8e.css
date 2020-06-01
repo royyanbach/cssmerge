@@ -1,8 +1,7 @@
 body {
-  font-family: Poppins, sans-serif;
+  font-family: Poppins,sans-serif;
   color: #0f3c4b;
   background-color: #f8f8f8;
-  /* 80 20 */
 }
 
 strong {
@@ -10,7 +9,7 @@ strong {
 }
 
 [v-cloak] {
-  display: none !important;
+  display: none!important;
 }
 
 .container {
@@ -24,7 +23,6 @@ strong {
   width: 680px;
   text-align: center;
   font-size: 1.25rem;
-  /* 20 */
   position: relative;
   padding: 50px 20px;
 }
@@ -32,17 +30,15 @@ strong {
 .box.has-advanced-upload {
   outline: 2px dashed #686868;
   outline-offset: -10px;
-
-  -webkit-transition: outline-offset .15s ease-in-out, background-color .15s linear;
-  transition: outline-offset .15s ease-in-out, background-color .15s linear;
+  -webkit-transition: outline-offset .15s ease-in-out,background-color .15s linear;
+  transition: outline-offset .15s ease-in-out,background-color .15s linear;
 }
 
 .box.is-dragover {
   outline-offset: -20px;
 }
 
-.box__dragndrop,
-.box__icon {
+.box__dragndrop,.box__icon {
   display: none;
 }
 
@@ -59,36 +55,32 @@ strong {
 }
 
 @-webkit-keyframes appear-from-inside {
-  from {
+  0% {
     -webkit-transform: translateY(-50%) scale(0);
   }
-
   75% {
     -webkit-transform: translateY(-50%) scale(1.1);
   }
-
   to {
     -webkit-transform: translateY(-50%) scale(1);
   }
 }
 
 @keyframes appear-from-inside {
-  from {
+  0% {
     transform: translateY(-50%) scale(0);
   }
-
   75% {
     transform: translateY(-50%) scale(1.1);
   }
-
   to {
     transform: translateY(-50%) scale(1);
   }
 }
 
 .box__file {
-  width: 0.1px;
-  height: 0.1px;
+  width: .1px;
+  height: .1px;
   opacity: 0;
   overflow: hidden;
   position: absolute;
@@ -104,16 +96,13 @@ strong {
   overflow: hidden;
 }
 
-.box__file+label:hover strong,
-.box__file:focus+label strong,
-.box__file.has-focus+label strong {
+.box__file+label:hover strong,.box__file.has-focus+label strong,.box__file:focus+label strong {
   color: #3977d3;
 }
 
-.box__file:focus+label,
-.box__file.has-focus+label {
+.box__file.has-focus+label,.box__file:focus+label {
   outline: 1px dotted #000;
-  outline: -webkit-focus-ring-color auto 5px;
+  outline: 5px auto -webkit-focus-ring-color;
 }
 
 .file-list {
@@ -142,14 +131,11 @@ strong {
   margin-top: 40px;
 }
 
-.box__button:hover,
-.box__button:focus {
+.box__button:focus,.box__button:hover {
   background-color: #0045ab;
 }
 
-*,
-h1,
-figure {
+*,figure,h1 {
   font-size: 100%;
   font-family: inherit;
   font-weight: inherit;
@@ -158,101 +144,77 @@ figure {
   vertical-align: baseline;
   border: 0;
   padding: 0;
-  margin: 0
+  margin: 0;
 }
 
-*,
-*::before,
-*::after,
-input[type=search] {
+*,:after,:before,input[type=search] {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  box-sizing: border-box
+  box-sizing: border-box;
 }
 
-*,
-*::before,
-*::after {
+*,:after,:before {
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale
+  -moz-osx-font-smoothing: grayscale;
 }
 
 html {
-  -ms-overflow-style: -ms-autohiding-scrollbar
-}
-
-html {
+  -ms-overflow-style: -ms-autohiding-scrollbar;
   -ms-touch-action: manipulation;
-  touch-action: manipulation
+  touch-action: manipulation;
 }
 
 svg {
   fill: currentColor;
   vertical-align: middle;
-  pointer-events: none
+  pointer-events: none;
 }
 
-ul,
-ol {
-  list-style: none
+ol,ul {
+  list-style: none;
 }
 
 em {
-  font-style: italic
+  font-style: italic;
 }
 
 b {
-  font-weight: inherit
+  font-weight: inherit;
 }
 
 i {
-  font-style: inherit
+  font-style: inherit;
 }
 
 ins {
-  text-decoration: none
+  text-decoration: none;
 }
 
-input,
-textarea,
-select {
+input,select,textarea {
   border-radius: 0;
-  border: none
+  border: none;
 }
 
 select:-moz-focusring {
   text-shadow: 0 0 0 #000;
-  color: transparent
+  color: transparent;
 }
 
-input[type=text],
-input[type=email],
-input[type=number],
-input[type=search],
-input[type=tel],
-input[type=url],
-textarea,
-select {
+input[type=email],input[type=number],input[type=search],input[type=tel],input[type=text],input[type=url],select,textarea {
   -webkit-appearance: none;
-  -moz-appearance: textfield
+  -moz-appearance: textfield;
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
+input::-webkit-inner-spin-button,input::-webkit-outer-spin-button {
   -webkit-appearance: none;
-  margin: 0
+  margin: 0;
 }
 
-input::-ms-reveal {
-  display: none
+input::-ms-clear,input::-ms-reveal {
+  display: none;
 }
 
-input::-ms-clear {
-  display: none
-}
-
-button,
-input[type=submit] {
+button,input[type=submit] {
   border: none;
-  background-color: transparent
+  background-color: transparent;
 }
