@@ -72189,7 +72189,7 @@ new Vue({
     var _this = this;
 
     if (window.Worker) {
-      this.worker = new Worker("cssmerge/worker.ab30da2c.js");
+      this.worker = new Worker("/cssmerge/worker.ab30da2c.js");
 
       this.worker.onmessage = function (e) {
         _this.result = e.data;
@@ -72300,7 +72300,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50485" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50591" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
